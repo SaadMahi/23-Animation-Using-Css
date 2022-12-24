@@ -79,7 +79,7 @@ img {
   bottom: 30px;
   width: 50px;
 
-  animation: drive 30s linear infinite;
+  animation: drive 30s linear infinite, jump 0.5s 10s 2 ease;
   animation-fill-mode: both;
 }
 
@@ -118,6 +118,14 @@ img {
 
   animation: wind 40s linear 1;
   animation-fill-mode: forwards;
+}
+
+.plane {
+  width: 150px;
+  position: absolute;
+  top: 0;
+
+  animation: drive 30s linear infinite, fly 10s 2s infinite ease;
 }
 
 .tree {
@@ -160,5 +168,37 @@ img {
   }
   to {
     left: 150%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 30px;
+  }
+
+  50% {
+    bottom: 60px;
+  }
+
+  100% {
+    bottom: 30px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    top: 0;
+  }
+
+  25% {
+    top: 25px;
+  }
+
+  50% {
+    top: 30px;
+  }
+
+  100% {
+    top: 0px;
   }
 }
