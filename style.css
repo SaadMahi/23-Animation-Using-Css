@@ -125,7 +125,7 @@ img {
   position: absolute;
   top: 0;
 
-  animation: drive 30s linear infinite, fly 10s 2s infinite ease;
+  animation: drive 10s linear infinite, fly 10s 2s infinite ease;
 }
 
 .tree {
