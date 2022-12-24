@@ -6,7 +6,7 @@
 
 body {
   
-  max-height: 100vh;
+  min-height: 100vh;
   background: green;
   overflow: hidden;
 }
@@ -134,7 +134,7 @@ img {
   }
 
   to {
-    transform: translateX(1000px);
+    transform: translateX(1500px);
   }
 }
 
@@ -143,6 +143,6 @@ img {
     left: -300px;
   }
   to {
-    left: 110%;
+    left: 150%;
   }
 }
