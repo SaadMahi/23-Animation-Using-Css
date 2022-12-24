@@ -5,28 +5,32 @@
 }
 
 body {
-  
   min-height: 100vh;
   background: green;
+
   overflow: hidden;
 }
 
 .sky {
   width: 100%;
   height: 130px;
+
   background: skyblue;
 }
 
 .grass {
   width: 100%;
   height: 130px;
+
   background: green;
 }
 
 .lines {
   border: 6px dashed #fff;
+
   height: 0px;
   width: 100%;
+
   position: relative;
   top: 60px;
 }
@@ -34,6 +38,7 @@ body {
 .road {
   width: 100%;
   height: 130px;
+
   background: darkgrey;
 }
 
@@ -44,7 +49,9 @@ img {
 .car {
   animation-name: drive;
   animation-duration: 5s;
+
   animation-fill-mode: both;
+
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
@@ -58,7 +65,9 @@ img {
 
   width: 150px;
   animation-name: drive;
+
   animation-duration: 3s;
+
   animation-fill-mode: both;
   animation-iteration-count: infinite;
   animation-direction: reverse;
@@ -81,6 +90,7 @@ img {
 .cloud:nth-child(1) {
   width: 200px;
   opacity: 0.8;
+
   animation: wind 90s linear infinite;
 
   transform: scaleX(3);
@@ -88,18 +98,22 @@ img {
 
 .cloud:nth-child(2) {
   width: 280px;
+
   animation: wind 80s linear infinite;
   transform: scaleX(2);
 }
 
 .sun {
   position: absolute;
+
   width: 100px;
+
   animation: wind 110s linear infinite;
 }
 
 .birds {
   position: absolute;
+
   transform: scaleX(2);
 
   animation: wind 40s linear 1;
@@ -114,6 +128,7 @@ img {
 .goat {
   position: absolute;
   right: 0;
+
   width: 50px;
 
   transform: scale(0.8);
@@ -121,6 +136,7 @@ img {
 
 .walk-horse {
   width: 100px;
+
   position: relative;
   top: 50px;
 
