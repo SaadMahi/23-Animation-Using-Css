@@ -1,0 +1,148 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  
+  max-height: 100vh;
+  background: green;
+  overflow: hidden;
+}
+
+.sky {
+  width: 100%;
+  height: 130px;
+  background: skyblue;
+}
+
+.grass {
+  width: 100%;
+  height: 130px;
+  background: green;
+}
+
+.lines {
+  border: 6px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: relative;
+  top: 60px;
+}
+
+.road {
+  width: 100%;
+  height: 130px;
+  background: darkgrey;
+}
+
+img {
+  width: 140px;
+}
+
+.car {
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  z-index: 2;
+}
+
+.car2 {
+  position: relative;
+  right: 100px;
+  top: 70px;
+
+  width: 150px;
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+
+.cycle {
+  position: relative;
+  bottom: 30px;
+  width: 50px;
+
+  animation: drive 30s linear infinite;
+  animation-fill-mode: both;
+}
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  opacity: 0.8;
+  animation: wind 90s linear infinite;
+
+  transform: scaleX(3);
+}
+
+.cloud:nth-child(2) {
+  width: 280px;
+  animation: wind 80s linear infinite;
+  transform: scaleX(2);
+}
+
+.sun {
+  position: absolute;
+  width: 100px;
+  animation: wind 110s linear infinite;
+}
+
+.birds {
+  position: absolute;
+  transform: scaleX(2);
+
+  animation: wind 40s linear 1;
+  animation-fill-mode: forwards;
+}
+
+.tree {
+  position: absolute;
+  right: 0;
+}
+
+.goat {
+  position: absolute;
+  right: 0;
+  width: 50px;
+
+  transform: scale(0.8);
+}
+
+.walk-horse {
+  width: 100px;
+  position: relative;
+  top: 50px;
+
+  animation: wind 50s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-400px);
+  }
+
+  to {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes wind {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 110%;
+  }
+}
