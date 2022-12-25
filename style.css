@@ -1,20 +1,30 @@
 * {
+
+  
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+
 }
 
-body {
-  min-height: 100vh;
-  background: green;
+*::-webkit-scrollbar{
+  display: none !important;
+}
 
+
+body {
+ 
+  
+  max-height: 100vh;
+  background: green;
+  
   overflow: hidden;
 }
 
 .sky {
   width: 100%;
-  height: 200px;
-
+  height: 170px;
+  display: block;
   background: skyblue;
 }
 
@@ -122,8 +132,7 @@ img {
 
 .plane {
   width: 150px;
-  position: absolute;
-  top: 0;
+  
 
   animation: drive 10s linear 1 forwards, fly 10s 2s 1 ease;
 }
@@ -187,7 +196,6 @@ img {
 
 @keyframes fly {
   0% {
-    top: 0;
   }
 
   25% {
@@ -202,3 +210,4 @@ img {
     top: 0px;
   }
 }
+
