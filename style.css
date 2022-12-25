@@ -1,35 +1,32 @@
 * {
-
-  
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   display: none !important;
 }
-
 
 body {
   max-height: 100vh;
   background: green;
-  
+
   overflow: hidden;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
 .sky {
-  width: 100%;
-  height: 170px;
   display: block;
   background: skyblue;
 }
 
 .grass {
-  width: 100%;
-  height: 130px;
-
   background: green;
 }
 
@@ -37,16 +34,12 @@ body {
   border: 6px dashed #fff;
 
   height: 0px;
-  width: 100%;
 
   position: relative;
   top: 60px;
 }
 
 .road {
-  width: 100%;
-  height: 130px;
-
   background: darkgrey;
 }
 
@@ -130,7 +123,7 @@ img {
 
 .plane {
   width: 150px;
-  
+
   position: relative;
   animation: drive 10s linear 1 forwards, fly 10s 2s 1 ease;
 }
@@ -193,7 +186,8 @@ img {
 }
 
 @keyframes fly {
-  0% {top: 0px;
+  0% {
+    top: 0px;
   }
 
   25% {
@@ -208,4 +202,3 @@ img {
     top: 0px;
   }
 }
-
