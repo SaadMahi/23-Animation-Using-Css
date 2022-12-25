@@ -13,8 +13,6 @@
 
 
 body {
- 
-  
   max-height: 100vh;
   background: green;
   
@@ -133,7 +131,7 @@ img {
 .plane {
   width: 150px;
   
-
+  position: relative;
   animation: drive 10s linear 1 forwards, fly 10s 2s 1 ease;
 }
 
@@ -195,15 +193,15 @@ img {
 }
 
 @keyframes fly {
-  0% {
+  0% {top: 0px;
   }
 
   25% {
-    top: 25px;
+    top: 20px;
   }
 
   50% {
-    top: 30px;
+    top: 35px;
   }
 
   100% {
