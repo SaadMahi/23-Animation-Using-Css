@@ -5,7 +5,7 @@
 }
 
 *::-webkit-scrollbar {
-  display: none !important;
+  display: none;
 }
 
 body {
@@ -48,13 +48,7 @@ img {
 }
 
 .car {
-  animation-name: drive;
-  animation-duration: 5s;
-
-  animation-fill-mode: both;
-
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: drive 5s linear infinite both;
 
   z-index: 2;
 }
@@ -65,14 +59,8 @@ img {
   top: 70px;
 
   width: 150px;
-  animation-name: drive;
 
-  animation-duration: 3s;
-
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-direction: reverse;
-  animation-timing-function: linear;
+  animation: drive 3s linear infinite reverse both;
 }
 
 .cycle {
