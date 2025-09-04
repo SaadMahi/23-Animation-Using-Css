@@ -1,0 +1,192 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  max-height: 100vh;
+  background: green;
+
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.sky {
+  display: block;
+  background: skyblue;
+}
+
+.grass {
+  background: green;
+}
+
+.lines {
+  border: 6px dashed #fff;
+
+  height: 0px;
+
+  position: relative;
+  top: 60px;
+}
+
+.road {
+  background: darkgrey;
+}
+
+img {
+  width: 140px;
+}
+
+.car {
+  animation: drive 5s linear infinite both;
+
+  z-index: 2;
+}
+
+.car2 {
+  position: relative;
+  right: 100px;
+  top: 70px;
+
+  width: 150px;
+
+  animation: drive 3s linear infinite reverse both;
+}
+
+.cycle {
+  position: relative;
+  bottom: 30px;
+  width: 50px;
+
+  animation: drive 30s linear infinite, jump 0.5s 10s 2 ease;
+  animation-fill-mode: both;
+}
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  opacity: 0.8;
+
+  animation: wind 90s linear infinite;
+
+  transform: scaleX(3);
+}
+
+.cloud:nth-child(2) {
+  width: 280px;
+
+  animation: wind 80s linear infinite;
+  transform: scaleX(2);
+}
+
+.sun {
+  position: absolute;
+
+  width: 100px;
+
+  animation: wind 110s linear infinite;
+}
+
+.birds {
+  position: absolute;
+
+  transform: scaleX(2);
+
+  animation: wind 40s linear 1;
+  animation-fill-mode: forwards;
+}
+
+.plane {
+  width: 150px;
+
+  position: relative;
+  animation: drive 10s linear 1 forwards, fly 10s 2s 1 ease;
+}
+
+.tree {
+  position: absolute;
+  right: 0;
+}
+
+.goat {
+  position: absolute;
+  right: 0;
+
+  width: 50px;
+
+  transform: scale(0.8);
+}
+
+.walk-horse {
+  width: 100px;
+
+  position: relative;
+  top: 50px;
+
+  animation: wind 50s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-400px);
+  }
+
+  to {
+    transform: translateX(1500px);
+  }
+}
+
+@keyframes wind {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 150%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 30px;
+  }
+
+  50% {
+    bottom: 60px;
+  }
+
+  100% {
+    bottom: 30px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: 20px;
+  }
+
+  50% {
+    top: 35px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
